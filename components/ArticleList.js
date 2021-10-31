@@ -1,9 +1,13 @@
 import articleStyle from '../styles/Article.module.css'
 
-const ArticleList = () => {
+const ArticleList = ({ articles }) => {
     return (
-        <div>
-
+        <div clssName={articleStyle.grid}>
+            {articles.map((article) =>
+            (
+                <h3>{article.title}</h3>
+            )
+            )}
         </div>
     )
 }

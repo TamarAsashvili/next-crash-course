@@ -1,21 +1,17 @@
 import Head from 'next/head'
+import ArticleList from '../components/ArticleList'
 
 
 export default function Home({ articles }) {
-  console.log(articles)
+
 
   return (
     <div >
       <Head>
         <title>WebDev news</title>
         <meta name="keywords" content='web development, programing' />
-
       </Head>
-      {articles.map((article) =>
-      (
-        <h3>{article.title}</h3>
-      )
-      )}
+      <ArticleList articles={articles} />
     </div>
   )
 }
