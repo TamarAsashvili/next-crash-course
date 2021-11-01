@@ -5,9 +5,9 @@ import articleStyle from '../styles/Article.module.css'
 const ArticleList = ({ articles }) => {
     return (
         <div className={articleStyle.grid}>
-            {articles.map((article) =>
+            {articles.map((article, index) =>
             (
-                <ArticleItem article={article} />
+                <ArticleItem article={article} key={index} />
             )
             )}
         </div>
